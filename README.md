@@ -91,3 +91,9 @@ server{
 
 <img width="529" alt="2022-01-06_16h23_06" src="https://user-images.githubusercontent.com/66947341/148352244-9f8bc4ab-1c36-42d4-a83a-151cd8079307.png">
 
+
+
+n1 nginx & uwsgi 設定.  nginx中location的ip 指向n2的內部ip
+n2 uwsgi設定
+
+
