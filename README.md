@@ -30,7 +30,7 @@ more /etc/nginx/sites-available/{your_project_name}.conf  (檢查憑證狀態)
 sudo certbot delete --cert-name {your_domain_name} (移除憑證)
 
 # 指令-uwsgi
-source .profile
+source .profile #安裝後需要讓path生效~不然抓不到uwsgi
 nano {your_project_name}.ini
 uwsgi {your_project_name}.ini
 tail -f {your_project_name}.log
