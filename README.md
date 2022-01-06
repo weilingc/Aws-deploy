@@ -66,3 +66,28 @@ kill {your_pid}
 ssh金鑰
 ssl概念
 snapd套件管理
+
+
+
+
+# -------------------01.06-------------------雙server, 多個服務
+nginx --- .conf檔
+
+server{
+       server_name 網域;
+       location / {
+               include uwsgi_params;
+               uwsgi_pass 內部ip:5000;
+       }
+       location /子目錄 {
+               include uwsgi_params;
+               uwsgi_pass 127.0.0.1:5000;
+       }
+       location /子目錄 {
+                root html檔資料夾路徑 e.g. /home/madeintw66/website/projectname;
+       }
+       
+}
+
+<img width="529" alt="2022-01-06_16h23_06" src="https://user-images.githubusercontent.com/66947341/148352244-9f8bc4ab-1c36-42d4-a83a-151cd8079307.png">
+
