@@ -86,12 +86,10 @@ server{
                uwsgi_pass {127.0.0.1}:{5000}; #本台VM所以用本地ip
        }
        location /子目錄 {
-                root html檔資料夾路徑 e.g. /home/madeintw66/{website}/{projectname};
+                alias html檔資料夾路徑 e.g. /home/{帳戶名}/{projectname};
        }
        
 }
 
 <img width="433" alt="2022-01-07_10h45_37" src="https://user-images.githubusercontent.com/66947341/148483127-767085ee-4c8c-4d61-90ef-065efc76cf53.png">
-
-<img width="529" alt="2022-01-06_16h23_06" src="https://user-images.githubusercontent.com/66947341/148352244-9f8bc4ab-1c36-42d4-a83a-151cd8079307.png">
 
