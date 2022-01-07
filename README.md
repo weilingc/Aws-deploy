@@ -70,32 +70,28 @@ snapd套件管理
 
 
 
-# -------------------01.06-------------------雙server, 多個服務
-nginx --- .conf檔
+# -------------------01.06-------------------雙VM串接, 一台VM多個loaction
+n1+n2串接
+n1: nginx設定  nginx中location的ip 指向n2的內部ip
+n2: uwsgi設定
 
 server{
        server_name 網域;
        location / {
                include uwsgi_params;
-               uwsgi_pass 內部ip:5000;
+               uwsgi_pass {aws另一台VM內部ip}:{5000};
        }
        location /子目錄 {
                include uwsgi_params;
-               uwsgi_pass 127.0.0.1:5000;
+               uwsgi_pass {127.0.0.1}:{5000}; #本台VM所以用本地ip
        }
        location /子目錄 {
-                root html檔資料夾路徑 e.g. /home/madeintw66/website/projectname;
+                root html檔資料夾路徑 e.g. /home/madeintw66/{website}/{projectname};
        }
        
 }
 
+<img width="433" alt="2022-01-07_10h45_37" src="https://user-images.githubusercontent.com/66947341/148483127-767085ee-4c8c-4d61-90ef-065efc76cf53.png">
+
 <img width="529" alt="2022-01-06_16h23_06" src="https://user-images.githubusercontent.com/66947341/148352244-9f8bc4ab-1c36-42d4-a83a-151cd8079307.png">
-
-
-
-n1 nginx & uwsgi 設定.  nginx中location的ip 指向n2的內部ip
-n2 uwsgi設定
-
-
-
 
