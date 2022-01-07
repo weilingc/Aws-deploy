@@ -99,7 +99,3 @@ n2 uwsgi設定
 
 
 
-# 同一台VM, 多個location配置(案例為網頁和webhook), 注意要下 root 或 alias, 否則路徑抓不到
-<img width="434" alt="2022-01-07_10h33_55" src="https://user-images.githubusercontent.com/66947341/148482076-53d60f32-5236-49b4-907b-a65c570536b5.png">
-
-
