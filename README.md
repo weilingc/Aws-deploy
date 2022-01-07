@@ -70,7 +70,7 @@ snapd套件管理
 
 
 
-# -------------------01.06-------------------雙VM串接, 一台VM多個loaction
+# --------01.06-------- 雙VM串接, 一台VM多個loaction
 n1+n2串接
 n1: nginx設定  nginx中location的ip 指向n2的內部ip
 n2: uwsgi設定
